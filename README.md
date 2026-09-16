@@ -10,7 +10,8 @@
 
 | 파일 | 내용 |
 |---|---|
-| `privacy.html` | 개인정보처리방침 |
+| `privacy.html` | 개인정보처리방침 (한국어) |
+| `privacy-en.html` | Privacy policy (English) |
 | `index.html` | 서비스 소개 |
 
 확장 프로그램 소스 코드는 포함되어 있지 않습니다.
@@ -18,6 +19,7 @@
 ## 링크
 
 - 개인정보처리방침 — https://dldmsals.github.io/ClearClause/privacy.html
+- Privacy policy (English) — https://dldmsals.github.io/ClearClause/privacy-en.html
 - 문의 — soyoon0915@yonsei.ac.kr
 
 ---

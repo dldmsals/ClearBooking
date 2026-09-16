@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Booking Briefing (Agoda) — Privacy Policy</title>
+<style>
+  body { font-family: -apple-system, "Segoe UI", sans-serif; line-height: 1.7;
+         max-width: 760px; margin: 0 auto; padding: 32px 20px 80px; color: #222; }
+  h1 { font-size: 1.5rem; }
+  h2 { font-size: 1.15rem; margin-top: 2.2em; border-bottom: 1px solid #ddd; padding-bottom: 0.3em; }
+  table { border-collapse: collapse; width: 100%; margin: 1em 0; }
+  th, td { border: 1px solid #ddd; padding: 8px 10px; text-align: left; vertical-align: top; font-size: 0.95em; }
+  th { background: #f5f5f5; }
+  .note { background: #fff8e1; border: 1px solid #f0d878; border-radius: 6px; padding: 12px 16px; margin: 1em 0; font-size: 0.95em; }
+  .lang { font-size: 0.9em; color: #666; margin-bottom: 1.5em; }
+  code { background: #f0f0f0; padding: 1px 5px; border-radius: 3px; }
+  a { color: #1a5fb4; }
+  footer { margin-top: 3em; color: #777; font-size: 0.85em; }
+</style>
+</head>
+<body>
+
+<p class="lang"><a href="privacy.html">한국어</a> · <strong>English</strong></p>
+
+<h1>Booking Briefing (Agoda) — Privacy Policy</h1>
+<p><strong>Effective date: 2026-09-16</strong></p>
+
+<p>"Booking Briefing (Agoda)" (the "Extension") is a browser extension that, on Agoda
+(agoda.com) accommodation booking pages, shows the real total payable including taxes and
+fees and the estimated loss if you cancel, in a single briefing card. It also scans publicly
+posted reviews for mentions of hidden costs (city/accommodation tax, deposits, breakfast,
+facility fees, on-site payments, and similar). This policy explains what information the
+Extension handles and how.</p>
+
+<h2>1. Information collected and processed</h2>
+<table>
+<tr><th>Type</th><th>Content</th><th>How it is handled</th></tr>
+<tr>
+  <td>Price information</td>
+  <td>Rate, tax and fee items displayed on the Agoda booking page you are currently viewing</td>
+  <td>Read within the browser only, to compute the real total · <strong>never sent
+      anywhere</strong></td>
+</tr>
+<tr>
+  <td>Cancellation policy text</td>
+  <td>Cancellation and refund terms shown on the page</td>
+  <td>Read within the browser only, to compute the estimated loss · <strong>never sent
+      anywhere</strong></td>
+</tr>
+<tr>
+  <td>Public review text</td>
+  <td>User reviews publicly posted on Agoda for the property in question</td>
+  <td><strong>Sent to our classification server</strong> to determine whether hidden costs
+      are mentioned (see the note below). Reviews are retrieved by the Extension calling
+      Agoda's own review API; no additional personally identifying information is
+      requested.</td>
+</tr>
+</table>
+
+<div class="note">
+<strong>Review text is sent to our own server for classification.</strong><br>
+The hidden-cost detection feature uses a classification model we trained ourselves, and that
+model runs on a separate server rather than inside the Extension. For this feature, the
+public review text for the property is sent to that server as-is (at most 100 reviews per
+request); only the classification result is returned. The server does not store the review
+text it receives and discards it immediately after handling the request. Review text may
+contain personal information such as the name of the author or of a third party (for
+example, hotel staff); in that case it is likewise discarded immediately after transmission
+and is not stored separately. If the server cannot be reached, the rest of the Extension
+(price and cancellation briefing, rule-based review display) continues to work normally.
+</div>
+
+<h2>2. Information not collected</h2>
+<ul>
+  <li><strong>Login or account information</strong> — The Extension itself has no sign-up or
+    login feature, and does not request or store usernames or passwords.</li>
+  <li><strong>Payment or financial information</strong> — No card numbers, account numbers or
+    other payment credentials are collected. The "total" shown on screen is a computed figure
+    for reference only.</li>
+  <li><strong>Names, contact details and other identifying information</strong> — The
+    Extension does not separately request any such information.</li>
+</ul>
+
+<h2>3. Where information is stored, and for how long</h2>
+<ul>
+  <li>Usability values such as computed price and cancellation results and the on-screen
+    position of the briefing card are stored <strong>only in the user's browser</strong> via
+    <code>chrome.storage.local</code>. They are not synced to any account or cloud service,
+    and are not transmitted to the development team's servers.</li>
+  <li>Text sent to the server for review classification is discarded as soon as the response
+    is generated, and is not stored in a database or anywhere else.</li>
+  <li>In the course of operating the server, basic access records such as client IP address
+    and timestamp may be logged temporarily by the cloud provider (Google Cloud Run). The
+    development team does not separately collect or analyze these records.</li>
+</ul>
+
+<h2>4. Disclosure to third parties</h2>
+<p>We do not provide or sell collected information to third parties for any purpose other
+than the classification processing described in section 1. We do not use it for purposes
+unrelated to the Extension's core functionality, such as advertising or credit scoring.</p>
+
+<h2>5. Permissions requested by the Extension</h2>
+<table>
+<tr><th>Permission</th><th>Purpose</th></tr>
+<tr><td><code>activeTab</code></td><td>To read the contents of the current tab (an Agoda page) on which the user has invoked the Extension</td></tr>
+<tr><td><code>sidePanel</code></td><td>To display analysis results in the browser's side panel</td></tr>
+<tr><td><code>storage</code></td><td>To store briefing card state and similar values locally, in the user's browser only</td></tr>
+<tr><td>Host permission <code>https://*.agoda.com/*</code></td><td>To confine the Extension to Agoda domain pages — it reads and runs nothing on any other site</td></tr>
+</table>
+
+<h2>6. User rights</h2>
+<p>The Extension maintains no user accounts, so there is no personal account information held
+on file. If you nonetheless have questions about how data is handled, or wish to request
+deletion or correction, please contact us at the address below.</p>
+
+<h2>7. Contact</h2>
+<p>Email: <code>soyoon0915@yonsei.ac.kr</code></p>
+
+<h2>8. Changes to this policy</h2>
+<p>If this policy changes, the updated text will be posted on this page together with a
+revision history.</p>
+<ul>
+  <li>2026-09-16 — Initial publication</li>
+</ul>
+
+<footer>Booking Briefing (Agoda) extension · Privacy policy for Chrome Web Store listing ·
+This English text is a translation of the <a href="privacy.html">Korean original</a>.</footer>
+
+</body>
+</html>
