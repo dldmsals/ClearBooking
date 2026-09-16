@@ -53,8 +53,10 @@ Extension handles and how.</p>
   <td>User reviews publicly posted on Agoda for the property in question</td>
   <td><strong>Sent to our classification server</strong> to determine whether hidden costs
       are mentioned (see the note below). Reviews are retrieved by the Extension calling
-      Agoda's own review API; no additional personally identifying information is
-      requested.</td>
+      Agoda's own review API; that request <strong>carries your existing Agoda login state
+      (cookies) to Agoda's own servers</strong>. The request goes to Agoda itself, and the
+      Extension neither reads nor stores that login state, nor sends it to the development
+      team's servers. No additional personally identifying information is requested.</td>
 </tr>
 </table>
 
@@ -63,18 +65,27 @@ Extension handles and how.</p>
 The hidden-cost detection feature uses a classification model we trained ourselves, and that
 model runs on a separate server rather than inside the Extension. For this feature, the
 public review text for the property is sent to that server as-is (at most 100 reviews per
-request); only the classification result is returned. The server does not store the review
+request, and at most 2,000 characters per review); only the classification result is
+returned. The server does not store the review
 text it receives and discards it immediately after handling the request. Review text may
 contain personal information such as the name of the author or of a third party (for
 example, hotel staff); in that case it is likewise discarded immediately after transmission
 and is not stored separately. If the server cannot be reached, the rest of the Extension
 (price and cancellation briefing, rule-based review display) continues to work normally.
+<br><br>
+<strong>When does this happen?</strong> It <strong>starts automatically</strong> at the
+moment price and cancellation terms are displayed on an Agoda property detail page — you
+do not have to open Agoda's review tab yourself. It runs once per property, and does not
+run on search result listing pages.
 </div>
 
 <h2>2. Information not collected</h2>
 <ul>
   <li><strong>Login or account information</strong> — The Extension itself has no sign-up or
-    login feature, and does not request or store usernames or passwords.</li>
+    login feature, and does not request or store usernames or passwords. Note that the
+    request used to fetch Agoda reviews does carry your existing Agoda login state to
+    Agoda's own servers (see section 1); the Extension does not read it or send it to the
+    development team's servers.</li>
   <li><strong>Payment or financial information</strong> — No card numbers, account numbers or
     other payment credentials are collected. The "total" shown on screen is a computed figure
     for reference only.</li>
@@ -88,6 +99,10 @@ and is not stored separately. If the server cannot be reached, the rest of the E
     position of the briefing card are stored <strong>only in the user's browser</strong> via
     <code>chrome.storage.local</code>. They are not synced to any account or cloud service,
     and are not transmitted to the development team's servers.</li>
+  <li>The review classification server runs on Google Cloud Platform (Cloud Run) in the
+    <strong>Seoul, Republic of Korea region</strong>, at
+    <code>https://clearclause-cost-api-12016686349.asia-northeast3.run.app</code>.
+    Review text is not transferred outside that region.</li>
   <li>Text sent to the server for review classification is discarded as soon as the response
     is generated, and is not stored in a database or anywhere else.</li>
   <li>In the course of operating the server, basic access records such as client IP address
@@ -103,7 +118,7 @@ unrelated to the Extension's core functionality, such as advertising or credit s
 <h2>5. Permissions requested by the Extension</h2>
 <table>
 <tr><th>Permission</th><th>Purpose</th></tr>
-<tr><td><code>activeTab</code></td><td>To read the contents of the current tab (an Agoda page) on which the user has invoked the Extension</td></tr>
+<tr><td><code>activeTab</code></td><td>To read the prices, cancellation terms and public reviews displayed on the Agoda page currently being viewed</td></tr>
 <tr><td><code>sidePanel</code></td><td>To display analysis results in the browser's side panel</td></tr>
 <tr><td><code>storage</code></td><td>To store briefing card state and similar values locally, in the user's browser only</td></tr>
 <tr><td>Host permission <code>https://*.agoda.com/*</code></td><td>To confine the Extension to Agoda domain pages — it reads and runs nothing on any other site</td></tr>
