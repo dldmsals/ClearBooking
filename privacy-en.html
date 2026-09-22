@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Booking Briefing (Agoda) — Privacy Policy</title>
+<title>ClearClause — Booking Briefing — Privacy Policy</title>
 <style>
   body { font-family: -apple-system, "Segoe UI", sans-serif; line-height: 1.7;
          max-width: 760px; margin: 0 auto; padding: 32px 20px 80px; color: #222; }
@@ -23,11 +23,11 @@
 
 <p class="lang"><a href="privacy.html">한국어</a> · <strong>English</strong></p>
 
-<h1>Booking Briefing (Agoda) — Privacy Policy</h1>
-<p><strong>Effective date: 2026-09-16</strong></p>
+<h1>ClearClause — Booking Briefing — Privacy Policy</h1>
+<p><strong>Effective date: 2026-09-22</strong> (first published 2026-09-16)</p>
 
-<p>"Booking Briefing (Agoda)" (the "Extension") is a browser extension that, on Agoda
-(agoda.com) accommodation booking pages, shows the real total payable including taxes and
+<p>"ClearClause — Booking Briefing" (the "Extension") is a browser extension that, on Agoda
+(agoda.com) and Trip.com (trip.com) accommodation booking pages, shows the real total payable including taxes and
 fees and the estimated loss if you cancel, in a single briefing card. It also scans publicly
 posted reviews for mentions of hidden costs (city/accommodation tax, deposits, breakfast,
 facility fees, on-site payments, and similar). This policy explains what information the
@@ -38,7 +38,7 @@ Extension handles and how.</p>
 <tr><th>Type</th><th>Content</th><th>How it is handled</th></tr>
 <tr>
   <td>Price information</td>
-  <td>Rate, tax and fee items displayed on the Agoda booking page you are currently viewing</td>
+  <td>Rate, tax and fee items displayed on the booking page you are currently viewing</td>
   <td>Read within the browser only, to compute the real total · <strong>never sent
       anywhere</strong></td>
 </tr>
@@ -50,11 +50,11 @@ Extension handles and how.</p>
 </tr>
 <tr>
   <td>Public review text</td>
-  <td>User reviews publicly posted on Agoda for the property in question</td>
+  <td>From user reviews publicly posted on the booking site (Agoda or Trip.com) for the property in question, <strong>only the sentences that contain cost-related keywords</strong></td>
   <td><strong>Sent to our classification server</strong> to determine whether hidden costs
-      are mentioned (see the note below). Reviews are retrieved by the Extension calling
-      Agoda's own review API; that request <strong>carries your existing Agoda login state
-      (cookies) to Agoda's own servers</strong>. The request goes to Agoda itself, and the
+      are mentioned (see the note below). Reviews are retrieved by the Extension calling the
+      booking site's own review API; that request <strong>carries your existing login state
+      (cookies) for that site to that site's own servers</strong>. The request goes to the booking site itself, and the
       Extension neither reads nor stores that login state, nor sends it to the development
       team's servers. No additional personally identifying information is requested.</td>
 </tr>
@@ -64,18 +64,19 @@ Extension handles and how.</p>
 <strong>Review text is sent to our own server for classification.</strong><br>
 The hidden-cost detection feature uses a classification model we trained ourselves, and that
 model runs on a separate server rather than inside the Extension. For this feature, the
-public review text for the property is sent to that server as-is (at most 100 reviews per
-request, and at most 2,000 characters per review); only the classification result is
-returned. The server does not store the review
-text it receives and discards it immediately after handling the request. Review text may
+Extension does not send full reviews: it sends <strong>only the sentences that contain a
+cost-related keyword</strong> (breakfast, parking, deposit, tax and similar) — at most 100
+sentences per request and at most 2,000 characters per sentence; only the classification
+result is returned. The server does not store the text it receives and discards it
+immediately after handling the request. Such sentences may
 contain personal information such as the name of the author or of a third party (for
 example, hotel staff); in that case it is likewise discarded immediately after transmission
 and is not stored separately. If the server cannot be reached, the rest of the Extension
 (price and cancellation briefing, rule-based review display) continues to work normally.
 <br><br>
 <strong>When does this happen?</strong> It <strong>starts automatically</strong> at the
-moment price and cancellation terms are displayed on an Agoda property detail page — you
-do not have to open Agoda's review tab yourself. It runs once per property, and does not
+moment price and cancellation terms are displayed on an Agoda or Trip.com property detail page — you
+do not have to open the site's review tab yourself. It runs once per property, and does not
 run on search result listing pages.
 </div>
 
@@ -83,8 +84,8 @@ run on search result listing pages.
 <ul>
   <li><strong>Login or account information</strong> — The Extension itself has no sign-up or
     login feature, and does not request or store usernames or passwords. Note that the
-    request used to fetch Agoda reviews does carry your existing Agoda login state to
-    Agoda's own servers (see section 1); the Extension does not read it or send it to the
+    request used to fetch reviews from the booking site does carry your existing login state
+    for that site to that site's own servers (see section 1); the Extension does not read it or send it to the
     development team's servers.</li>
   <li><strong>Payment or financial information</strong> — No card numbers, account numbers or
     other payment credentials are collected. The "total" shown on screen is a computed figure
@@ -118,9 +119,9 @@ unrelated to the Extension's core functionality, such as advertising or credit s
 <h2>5. Permissions requested by the Extension</h2>
 <table>
 <tr><th>Permission</th><th>Purpose</th></tr>
-<tr><td><code>activeTab</code></td><td>To read the prices, cancellation terms and public reviews displayed on the Agoda page currently being viewed</td></tr>
+<tr><td><code>activeTab</code></td><td>To read the prices, cancellation terms and public reviews displayed on the booking-site page currently being viewed</td></tr>
 <tr><td><code>storage</code></td><td>To store briefing card state and similar values locally, in the user's browser only</td></tr>
-<tr><td>Host permission <code>https://*.agoda.com/*</code></td><td>To confine the Extension to Agoda domain pages — it reads and runs nothing on any other site</td></tr>
+<tr><td>Host permission <code>https://*.agoda.com/*</code>, <code>https://*.trip.com/*</code></td><td>To confine the Extension to Agoda and Trip.com domain pages — it reads and runs nothing on any other site</td></tr>
 </table>
 
 <h2>6. User rights</h2>
@@ -135,10 +136,11 @@ deletion or correction, please contact us at the address below.</p>
 <p>If this policy changes, the updated text will be posted on this page together with a
 revision history.</p>
 <ul>
+  <li>2026-09-22 — Transmission narrowed from full reviews to excerpted sentences containing cost keywords · Trip.com support added · product name updated</li>
   <li>2026-09-16 — Initial publication</li>
 </ul>
 
-<footer>Booking Briefing (Agoda) extension · Privacy policy for Chrome Web Store listing ·
+<footer>ClearClause — Booking Briefing extension · Privacy policy for Chrome Web Store listing ·
 This English text is a translation of the <a href="privacy.html">Korean original</a>.</footer>
 
 </body>
