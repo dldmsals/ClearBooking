@@ -1,6 +1,6 @@
-# 예약 브리핑 (아고다)
+# Clear Booking — 예약 브리핑
 
-아고다 숙소 예약 페이지에서 **세금·수수료를 포함한 실제 결제 총액**과 **취소 시 예상
+아고다·트립닷컴·부킹닷컴 숙소 예약 페이지에서 **세금·수수료를 포함한 실제 결제 총액**과 **취소 시 예상
 손실액**을 한 장의 브리핑 카드로 보여주는 크롬 확장 프로그램입니다. 공개된 리뷰에서
 도시세·보증금·주차비 같은 숨은 비용 언급도 함께 찾아 알려줍니다.
 
@@ -18,8 +18,8 @@
 
 ## 링크
 
-- 개인정보처리방침 — https://dldmsals.github.io/ClearClause/privacy.html
-- Privacy policy (English) — https://dldmsals.github.io/ClearClause/privacy-en.html
+- 개인정보처리방침 — https://dldmsals.github.io/ClearBooking/privacy.html
+- Privacy policy (English) — https://dldmsals.github.io/ClearBooking/privacy-en.html
 - 문의 — soyoon0915@yonsei.ac.kr
 
 ---
