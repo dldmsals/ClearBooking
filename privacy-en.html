@@ -59,6 +59,16 @@ Extension handles and how.</p>
       Extension neither reads nor stores that login state, nor sends it to the development
       team's servers. No additional personally identifying information is requested.</td>
 </tr>
+<tr>
+  <td>Calendar event<br>(only when you press the button)</td>
+  <td>The free-cancellation deadline shown on the briefing card, the property name, check-in date and number of nights, the total price, and the booking page address</td>
+  <td><strong>"Add reminder (.ics)"</strong> builds an event file in the browser and saves it to your computer;
+      <strong>nothing is sent anywhere.</strong>
+      <strong>"Google Calendar"</strong> opens Google Calendar in a new tab only when you press it, and
+      at that moment the content above is carried in the address and <strong>passed to Google</strong>
+      (Google's privacy policy applies). If you do not press the button, nothing is passed on, and in no
+      case is it sent to the development team's servers.</td>
+</tr>
 </table>
 
 <div class="note">
@@ -120,7 +130,9 @@ run on search result listing pages.
 
 <h2>4. Disclosure to third parties</h2>
 <p>We do not provide or sell collected information to third parties for any purpose other
-than the classification processing described in section 1. We do not use it for purposes
+than the classification processing described in section 1. The one exception is when you
+yourself press the "Google Calendar" button, in which case the content of that event (see
+section 1) is passed to Google. We do not use it for purposes
 unrelated to the Extension's core functionality, such as advertising or credit scoring.</p>
 
 <h2>5. Permissions requested by the Extension</h2>
@@ -143,6 +155,7 @@ deletion or correction, please contact us at the address below.</p>
 <p>If this policy changes, the updated text will be posted on this page together with a
 revision history.</p>
 <ul>
+  <li>2026-09-24 — Free-cancellation deadline calendar feature added (.ics file saved locally; passed to Google Calendar only when you press the button)</li>
   <li>2026-09-24 — Product renamed to Clear Booking · Booking.com support added · saved-stay list added to locally stored items · clarified that login state accompanies review requests for Agoda only · status-check request and language code disclosed · classification server address changed (clear-booking-cost-api)</li>
   <li>2026-09-22 — Transmission narrowed from full reviews to excerpted sentences containing cost keywords · Trip.com support added · product name updated</li>
   <li>2026-09-16 — Initial publication</li>
