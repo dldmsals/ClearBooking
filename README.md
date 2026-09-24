@@ -20,7 +20,7 @@
 
 - 개인정보처리방침 — https://dldmsals.github.io/ClearBooking/privacy.html
 - Privacy policy (English) — https://dldmsals.github.io/ClearBooking/privacy-en.html
-- 문의 — soyoon0915@yonsei.ac.kr
+- 문의 — eunmin_lee@yonsei.ac.kr
 
 ---
 
